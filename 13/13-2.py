@@ -16,8 +16,8 @@ def read_input(file_name):
 
 def solve_linear_equations(a_x, a_y, b_x, b_y, p_x, p_y):
     A, B = symbols('A B', integer=True)
-    eq1 = Eq(a_x * A + b_x * B, p_x)
-    eq2 = Eq(a_y * A + b_y * B, p_y)
+    eq1 = Eq(a_x * A + b_x * B, 10000000000000+p_x)
+    eq2 = Eq(a_y * A + b_y * B, 10000000000000+p_y)
 
     solutions = solve((eq1, eq2), (A, B), dict=True)
     valid_costs = []
